@@ -74,15 +74,28 @@
                 <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
             </div>
             <!-- /.navbar-header -->
-
+		
+		
 			 <!-- /.navbar-header -->
             <div class="nav navbar-top-links navbar-right">
-                <form class="form-horizontal" action="../php/Exit.php" method="post" enctype="multipart/form-data" >
-                    <!--<input type="submit" class="btn btn-warning" value="Выйти из меню корабля">-->
-                    <button type="submit">
-                        <img src="../css/icon/logout.png">
-                    </button>
-                </form>
+				<ul class="">
+						<li>
+							<form class="form-horizontal" action="../php/Set_param_for_report.php" method="post" enctype="multipart/form-data" >
+								<!--<input type="submit" class="btn btn-warning" value="Выйти из меню корабля">-->
+								<button type="submit">
+									Скачать отчет
+								</button>
+							</form>
+						</li>
+                        <li>
+							<form class="form-horizontal" action="../php/Exit.php" method="post" enctype="multipart/form-data" >
+								<!--<input type="submit" class="btn btn-warning" value="Выйти из меню корабля">-->
+								<button type="submit">
+									<img src="../css/icon/logout.png">
+								</button>
+							</form>
+						</li>
+				</ul>
             </div>
         
          <div class="navbar-default sidebar" role="navigation">
@@ -95,19 +108,19 @@
                             <a href="MainPage.html"><i class="fa fa-list-alt fa-fw"></i> Основная страничка</a>
                         </li>
                         <li>
-                            <a href="ValueOfAssets.html"><i class="fa fa-dollar fa-fw"></i> Оценка стоимости активов предприятия</a>
+                            <a href="actives.html"><i class="fa fa-dollar fa-fw"></i> Оценка стоимости активов предприятия</a>
                         </li>
 						<li>
-                            <a href="ValueOfAssets.html"><i class="fa fa-arrows-h fa-fw"></i> Показатели финансовой устойчивости предприятия</a>
+                            <a href="Finance_stability.html"><i class="fa fa-arrows-h fa-fw"></i> Показатели финансовой устойчивости предприятия</a>
                         </li>
 						<li>
-                            <a href="ValueOfAssets.html"><i class="fa fa-credit-card fa-fw"></i> Ликвидность и платежеспособность предприятия</a>
+                            <a href="Liquid.html"><i class="fa fa-credit-card fa-fw"></i> Ликвидность и платежеспособность предприятия</a>
                         </li>
 						<li>
-                            <a href="ValueOfAssets.html"><i class="fa fa-bar-chart-o fa-fw"></i> Показатели доходности (рентабельности) предприятия</a>
+                            <a href="Rentabelnost.html"><i class="fa fa-bar-chart-o fa-fw"></i> Показатели доходности (рентабельности) предприятия</a>
                         </li>
 						<li>
-                            <a href="ValueOfAssets.html"><i class="fa fa-sort-amount-desc fa-fw"></i> Прогнозирование банкротства</a>
+                            <a href="Bankrotstvo.html"><i class="fa fa-sort-amount-desc fa-fw"></i> Прогнозирование банкротства</a>
                         </li>
                     </ul>
                 </div>

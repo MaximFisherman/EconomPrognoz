@@ -32,6 +32,33 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+	<style>
+	.button1 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+	</style>
 
 </head>
 
@@ -59,11 +86,10 @@
                                     </div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h4 class="timeline-title">Ввод исходных данных</h4>
-                                         
+                                            <h4 class="timeline-title">Загрузка образца для заполнения данных</h4>                                   
                                         </div>
-                                        <div class="timeline-body">
-                                            <p>Сначала вводите свои данные</p>
+										 <div class="timeline-body">
+                                            <p>Заполнение образца</p>
                                         </div>
                                     </div>
                                 </li>
@@ -72,11 +98,11 @@
                                     </div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h4 class="timeline-title">Функции программы</h4>
+                                            <h4 class="timeline-title">Ввод данных</h4>
                                         </div>
-                                        <div class="timeline-body">
-                                            <p>Выбираете что хотите с ними сделать</p>
-                                           
+										
+										 <div class="timeline-body">
+                                            <p>Загрузка образца</p>
                                         </div>
                                     </div>
                                 </li>
@@ -85,10 +111,10 @@
                                     </div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h4 class="timeline-title">Выбранные методы анализа</h4>
+                                            <h4 class="timeline-title">Анализ данных</h4>
                                         </div>
                                         <div class="timeline-body">
-                                            <p>Выполнение выбранных функций</p>
+                                            <p>Расчет коэфициенов и показателей характеризующие состояние предприятия</p>
                                         </div>
                                     </div>
                                 </li>
@@ -100,7 +126,7 @@
                                             <h4 class="timeline-title">Распределение полученых резульатов</h4>
                                         </div>
                                         <div class="timeline-body">
-                                            <p>Данные сортируются, построенние диаграмм и тд.</p>
+                                            <p>Отображение результатов анализа</p>
                                         </div>
                                     </div>
                                 </li>
@@ -110,16 +136,29 @@
                                     </div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h4 class="timeline-title">Резульаты анализа</h4>
+                                            <h4 class="timeline-title">Создание отчета</h4>
                                         </div>
                                         <div class="timeline-body">
-                                            <p>Вы просматриваете все возможное что связанное с вашим предприятием</p>
+                                            <p>Создание документа с результатами расчетных данным</p>
                                         </div>
                                     </div>
                                 </li>
                         
                             </ul>
                         </div>
+						
+						<form class="" id="form1" enctype="multipart/form-data" style="margin-left: 100px;margin-right: 100px;" method="post" action="../php/DownloadExampleEcxel.php">
+                            <div class="row" id="step-1">
+                                <div class="col-xs-12">
+                                    <div class="col-md-12 text-center">                                    
+                                        <input  type="submit" class="button1" onclick="" value="Скачать пример" />
+                                    </div>
+                                </div>
+                            </div>
+						</form>
+						<br>
+						
+						
                         <form class="" id="form1" enctype="multipart/form-data" style="margin-left: 100px;margin-right: 100px;" method="post" action="../php/Upload.php">
                             <div class="row setup-content" id="step-1">
                                 <div class="col-xs-12">
@@ -132,7 +171,7 @@
                                     <div id="fileSize"></div>
                                     <div id="fileType"></div>
                                     <div class="row">
-                                        <input type="button" class="btn btn-primary" onclick="uploadFile()" value="Загрузить файл" />
+                                        <input type="button" style="display:none" id="kyl" class="btn btn-primary" onclick="uploadFile()" value="Загрузить файл" />
                                     </div>
                                     <div id="progressNumber"></div>
 
@@ -165,6 +204,7 @@
           document.getElementById('fileName').innerHTML = 'Name: ' + file.name;
           document.getElementById('fileSize').innerHTML = 'Size: ' + fileSize;
           document.getElementById('fileType').innerHTML = 'Type: ' + file.type;
+		  pck=document.getElementById("kyl");pck.style.display="block";
         }
       }
 
@@ -204,6 +244,10 @@
       function uploadCanceled(evt) {
         alert("The upload has been canceled by the user or the browser dropped the connection.");
       }
+	  
+	  
+	  
+	  
 	</script>
 	
     <!-- jQuery -->
